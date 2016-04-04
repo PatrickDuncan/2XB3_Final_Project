@@ -1,79 +1,136 @@
 @charset "utf-8";
 
 body {
-	font-family: 'Dosis', sans-serif;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-	cursor: default;
+	height:100%;
+	width:100%;
+	font-family:'Dosis', sans-serif;
+}
+
+html {
+	height:100%;
+	width:100%;
 }
 
 h1 {
-	text-align: center;
+	text-align:center;
 }
 
 p {
-	font-size: 16px;
+	font-size:16px;
+}
+
+.btn-lg {
+	font-size:20px;
+}
+
+#head {
+	font-size:18px;
+	font-weight:bold;
 }
 
 #desc {
-	padding-right: 75px;
+	padding-right:75px;
 }
 
 #logo {
-	float: left;
-	padding-right: 75px;
+	float:left;
+	padding-right:75px;
 }
 
 #back {
-	height: 100%;
-	position: fixed;
+	height:100%;
+	position:fixed;
 }
 
 #oneLine {
-	display: inline-block;
+	display:inline-block;
 }
 
 #top {
-	padding-left: 125px;	
+	padding-left:125px;
 }
 
 #search {
-	padding-top: 10px;
+	padding-top:10px;
 }
 
 #options {
-	padding-left: 10px;
+	padding-left:10px;
 }
 
 #sortItems {
-	list-style-type: none;
-	padding-left: 10px;
+	list-style-type:none;
+	padding-left:10px;
+}
+
+#countInput {
+	top:7px;
+	float:right;
+}
+
+#countString {
+	padding-top:9px;
+	float:right;
+	font-size:20px;
+}
+
+#loading {
+	display:block;
+	position:fixed;
+	left: 50%;
+}
+
+.pager {
+	float:right;
+	padding-top:12px;
+	padding-right:10px;
+}
+
+#entries {
+	position:relative;
+	left:110px;
+	width:91%;
+}
+
+#table-wrapper {
+ 	position:relative;
+}
+
+#table-scroll {
+	height:360px;
+	overflow:auto;
+	padding-left:10px;
+}
+
+#table-wrapper table thead th .text {
+  /position:absolute;   
+  /top:-20px;
+ / z-index:2;
+  /height:20px;
+  /width:35%;
 }
 
 .spacing {
-	font-size: 20px;
+	font-size:20px;
 }
 
 .dropdown-menu {
-	min-width: 0px;
-    width: 110px;
+	min-width:0px;
+    width:110px;
 }
 
 ul#sortItems.dropdown-menu {
-	background-color: #EFEBE9;
+	background-color:#EFEBE9;
 }
 
 .light {
-	background-color: #EFEBE9;
+	background-color:#EFEBE9;
 }
 
 .medium {
-	background-color: #D7CCC8;	
+	background-color:#D7CCC8;	
 }
 
 .dark {
-	background-color: #BCAAA4;	
+	background-color:#BCAAA4;	
 }

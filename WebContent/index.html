@@ -1,75 +1,109 @@
 <!DOCTYPE html>
-<!-- saved from url=(0050)http://getbootstrap.com/examples/navbar-fixed-top/ -->
+
 <html lang="en">
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="icon" href="images/favicon.ico">
+<link rel="icon" href="assets/favicon.ico">
 
 <title>Bitter Buyers</title>
-<link href='https://fonts.googleapis.com/css?family=Dosis:500' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Dosis:500'
+	rel='stylesheet' type='text/css'>
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap core CSS -->
 <link href="css/style.css" rel="stylesheet">
-<!-- Boostrap core JS -->
-<script type = "text/javascript">
-	function showOrHide(a) {
-		var Element = document.getElementById(a);
-		if (Element.style.display == "block") { 
-			Element.style.display = "none";
-		}		
-	} 
-</script>
+
 </head>
 
 <body class="light">
 	<div id="oneLine">
-	
-	<p id="desc"><img id="logo" src="images/logo.png" align="left"><br><br>Bitter Buyers is meant to empower consumers and prevent them from feeling blind when they encounter a problem and need a company to assist them. It is of the utmost importance that the consumer is making an informed investment with peace of mind that they can trust those they choose to use services from.
-	</p>
+		<p id="desc">
+			<img id="logo" src="assets/logo.png" align="left"><br> <br>Bitter
+			Buyers is an application geared towards a better relationship between
+			the company and the customer. By using the Consumer Financial
+			Protection Bureau's complaint database, customer satisfaction for
+			thousands of companies across the US can be determined and displayed
+			for any potential buyer.
+		</p>
 	</div>
+
 	<div id="back" class="medium">
-	<div id="top" class="dark">
-		<div class="btn-group">
-		<button type="button" class="btn btn-primary btn-lg">Company</button>
-		<button type="button" class="btn btn-success btn-lg">Product</button>
-		<button type="button" class="btn btn-info btn-lg">Date</button>
-		<button type="button" class="btn btn-warning btn-lg">Keyword</button>
-		</div>
-		<br>
-		<div class="col-lg-3" id = "search">
-			<div class="input-group">
-				<input type="text" class="form-control" placeholder="Search for...">
-				<span class="input-group-btn">
-					<button class="btn btn-default light" type="button">Go!</button>
-				</span>
+		<div id="top" class="dark">
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary btn-lg"
+					onClick="return sort(0)">Date</button>
+				<button type="button" class="btn btn-success btn-lg"
+					onClick="return sort(1)">Product</button>
+				<button type="button" class="btn btn-primary btn-lg"
+					onClick="return sort(3)">Issue</button>
+				<button type="button" class="btn btn-success btn-lg"
+					onClick="return sort(7)">Company</button>
+				<button type="button" class="btn btn-primary btn-lg"
+					onClick="return sort(8)">State</button>
+
 			</div>
+
+			<div id="countInput" class="col-lg-2">
+				<div class="input-group">
+					<input type="text" class="form-control" aria-label="..."
+						placeholder="Keyword..."> <span class="input-group-btn">
+						<button class="btn btn-default light" type="button">Go!</button>
+					</span>
+				</div>
+			</div>
+			<p id="countString">Number of Complaints</p>
+			<br>
+			<div class="col-lg-3" id="search">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search for...">
+					<span class="input-group-btn">
+						<button class="btn btn-default light" type="button">Go!</button>
+					</span>
+				</div>
+			</div>
+
+			<nav>
+
+				<ul class="pager">
+					<li><a href="#">Previous</a></li>
+					<li><a href="#">Next</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div id="loading">
+			<h3>Loading . . .</h3>
+		</div>
+		<br> <br> <br>
+
+		<div class="btn-group" id="options">
+			<button id="optionsLabel" type="button" class="btn btn-danger dropdown-toggle"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded=
+				"false">A - Z <span class="caret"></span></button>
+			<ul class="dropdown-menu" id="sortItems">
+				<li><input type="checkbox" id="zero" aria-label="..." value="1"
+					name="fooby[]" checked><span class="spacing"></span>A - Z</li>
+				<li><input type="checkbox" id="one" aria-label="..." value="1"
+					name="fooby[]"><span class="spacing"></span>Z - A</li>
+			</ul>
+		</div>
+
+		<div id="table-scroll">
+			<table id="entries" class="light">
+				<tr>
+					<td> </td>
+				</tr>
+			</table>
 		</div>
 	</div>
-	<br><br><br>
 
-	<div class="btn-group" id="options">
-	  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	    A - Z <span class="caret"></span>
-	  </button>
-	  <ul class="dropdown-menu" id="sortItems">
-			<li id="zero"><input type="checkbox" aria-label="..." checked><span class="spacing"> </span> A - Z</li>
-			<li id="first"><input type="checkbox" aria-label="..."><span class="spacing"> </span> Z - A</li>
-			<li id="second"><input type="checkbox" aria-label="..."><span class="spacing"> </span> Short - Long</li>
-			<li id="third"><input type="checkbox" aria-label="..."><span class="spacing"> </span> Long - Short</li>
-			<li id="fourth"><input type="checkbox" aria-label="..."><span class="spacing"> </span> Old - New</li>
-			<li id="fifth"><input type="checkbox" aria-label="..."><span class="spacing"> </span> New - Old</li>
-		</ul>
-	</div>
-	</div>
-
-
-<script src = "./js/jquery.min.js"></script>
-<script src = "./js/bootstrap.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="papaparse.min.js"></script>
+	<script src="js/entries.js"></script>
+	<script src="js/oneCheck.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
