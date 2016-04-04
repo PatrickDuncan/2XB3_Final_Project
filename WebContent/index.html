@@ -57,11 +57,15 @@
 			</div>
 			<p id="countString">Number of Complaints</p>
 			<br>
-			<div class="col-lg-3" id="search">
+			<div class="col-lg-5" id="search">
 				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Search for...">
+					<input id="findC" type="text" class="form-control" placeholder="Search for Company...">
 					<span class="input-group-btn">
-						<button class="btn btn-default light" type="button">Go!</button>
+						<button class="btn btn-default light" type="button" onClick="return searchC()">Go!</button>
+					</span>
+					<input id="findP" type="text" class="form-control" placeholder="Search for Product...">
+					<span class="input-group-btn">
+						<button class="btn btn-default light" type="button" onClick="return searchP()">Go!</button>
 					</span>
 				</div>
 			</div>
@@ -69,13 +73,16 @@
 			<nav>
 
 				<ul class="pager">
-					<li><a href="#">Previous</a></li>
-					<li><a href="#">Next</a></li>
+					<li><a onClick="return step(false)">Previous</a></li>
+					<li><a onClick="return step(true)">Next</a></li>
 				</ul>
 			</nav>
 		</div>
 		<div id="loading">
 			<h3>Loading . . .</h3>
+		</div>
+		<div id="searching">
+			<h3>Searching . . .</h3>
 		</div>
 		<br> <br> <br>
 

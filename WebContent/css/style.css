@@ -4,6 +4,12 @@ body {
 	height:100%;
 	width:100%;
 	font-family:'Dosis', sans-serif;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	cursor: default;
 }
 
 html {
@@ -17,6 +23,11 @@ h1 {
 
 p {
 	font-size:16px;
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-o-user-select: text;
+	user-select: text;
 }
 
 .btn-lg {
@@ -66,6 +77,11 @@ p {
 #countInput {
 	top:7px;
 	float:right;
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-o-user-select: text;
+	user-select: text;
 }
 
 #countString {
@@ -77,7 +93,15 @@ p {
 #loading {
 	display:block;
 	position:fixed;
-	left: 50%;
+	left:50%;
+	font-weight:bold;
+}
+
+#searching {
+	display:none;
+	position:fixed;
+	left:50%;
+	font-weight:bold;
 }
 
 .pager {
@@ -90,6 +114,11 @@ p {
 	position:relative;
 	left:110px;
 	width:91%;
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-o-user-select: text;
+	user-select: text;
 }
 
 #table-wrapper {
