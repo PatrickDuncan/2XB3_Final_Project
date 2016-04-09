@@ -4,12 +4,12 @@ body {
 	height:100%;
 	width:100%;
 	font-family:'Dosis', sans-serif;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-	cursor: default;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-o-user-select:none;
+	user-select:none;
+	cursor:default;
 }
 
 html {
@@ -18,16 +18,21 @@ html {
 }
 
 h1 {
+	font-size:45px;
+	text-align:center;
+}
+
+h2 {
 	text-align:center;
 }
 
 p {
 	font-size:16px;
-	-webkit-user-select: text;
-	-khtml-user-select: text;
-	-moz-user-select: text;
-	-o-user-select: text;
-	user-select: text;
+	-webkit-user-select:text;
+	-khtml-user-select:text;
+	-moz-user-select:text;
+	-o-user-select:text;
+	user-select:text;
 }
 
 .btn-lg {
@@ -69,6 +74,11 @@ p {
 	padding-left:10px;
 }
 
+#options2 {
+	left:10px;
+	bottom:200px;
+}
+
 #sortItems {
 	list-style-type:none;
 	padding-left:10px;
@@ -77,11 +87,11 @@ p {
 #countInput {
 	top:7px;
 	float:right;
-	-webkit-user-select: text;
-	-khtml-user-select: text;
-	-moz-user-select: text;
-	-o-user-select: text;
-	user-select: text;
+	-webkit-user-select:text;
+	-khtml-user-select:text;
+	-moz-user-select:text;
+	-o-user-select:text;
+	user-select:text;
 }
 
 #countString {
@@ -114,11 +124,11 @@ p {
 	position:relative;
 	left:110px;
 	width:91%;
-	-webkit-user-select: text;
-	-khtml-user-select: text;
-	-moz-user-select: text;
-	-o-user-select: text;
-	user-select: text;
+	-webkit-user-select:text;
+	-khtml-user-select:text;
+	-moz-user-select:text;
+	-o-user-select:text;
+	user-select:text;
 }
 
 #table-wrapper {
@@ -129,14 +139,6 @@ p {
 	height:360px;
 	overflow:auto;
 	padding-left:10px;
-}
-
-#table-wrapper table thead th .text {
-  /position:absolute;   
-  /top:-20px;
- / z-index:2;
-  /height:20px;
-  /width:35%;
 }
 
 .spacing {
@@ -162,4 +164,8 @@ ul#sortItems.dropdown-menu {
 
 .dark {
 	background-color:#BCAAA4;	
+}
+.table a {
+    display:block;
+    text-decoration:none;
 }

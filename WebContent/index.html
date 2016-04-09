@@ -20,7 +20,7 @@
 </head>
 
 <body class="light">
-	<div id="oneLine">
+	<div class="sixteen-nine" id="oneLine">
 		<p id="desc">
 			<img id="logo" src="assets/logo.png" align="left"><br> <br>Bitter
 			Buyers is an application geared towards a better relationship between
@@ -57,21 +57,18 @@
 			</div>
 			<p id="countString">Number of Complaints</p>
 			<br>
-			<div class="col-lg-5" id="search">
+			<div class="col-lg-3" id="search">
 				<div class="input-group">
-					<input id="findC" type="text" class="form-control" placeholder="Search for Company...">
-					<span class="input-group-btn">
-						<button class="btn btn-default light" type="button" onClick="return searchC()">Go!</button>
-					</span>
-					<input id="findP" type="text" class="form-control" placeholder="Search for Product...">
-					<span class="input-group-btn">
-						<button class="btn btn-default light" type="button" onClick="return searchP()">Go!</button>
-					</span>
+					<input id="find" type="text" class="form-control"
+						placeholder="Search for Company..."> <span
+						class="input-group-btn">
+						<button class="btn btn-default light" type="button"
+							onClick="return search()">Go!</button>
+					</span>					
 				</div>
 			</div>
 
 			<nav>
-
 				<ul class="pager">
 					<li><a onClick="return step(false)">Previous</a></li>
 					<li><a onClick="return step(true)">Next</a></li>
@@ -87,17 +84,34 @@
 		<br> <br> <br>
 
 		<div class="btn-group" id="options">
-			<button id="optionsLabel" type="button" class="btn btn-danger dropdown-toggle"
-				data-toggle="dropdown" aria-haspopup="true" aria-expanded=
-				"false">A - Z <span class="caret"></span></button>
+			<button id="optionsLabel" type="button"
+				class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">A - Z <span class="caret"></span></button>
 			<ul class="dropdown-menu" id="sortItems">
-				<li><input type="checkbox" id="zero" aria-label="..." value="1"
-					name="fooby[]" checked><span class="spacing"></span>A - Z</li>
-				<li><input type="checkbox" id="one" aria-label="..." value="1"
-					name="fooby[]"><span class="spacing"></span>Z - A</li>
+				<li><input type="checkbox" aria-label="..." value="1" id="min"
+					name="minMax" checked><span class="spacing"></span>A - Z</li>
+				<li><input type="checkbox" aria-label="..." value="1" id="max"
+					name="minMax"><span class="spacing"></span>Z - A</li>
 			</ul>
 		</div>
-
+		
+		<div class="btn-group" id="options2" style="position:fixed">
+			<br>
+			<br>
+			<button id="optionsLabel2" type="button"
+				class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">Company <span class="caret"></span></button>
+			<ul class="dropdown-menu" id="sortItems">
+				<li id="first"><input type="checkbox" id="zero" aria-label="..." value="1"
+					name="sorting" checked><span class="spacing"></span>Company </li>
+				<li id="second"><input type="checkbox" id="one" aria-label="..." value="1"
+					name="sorting"><span class="spacing"></span>Issue </li>
+				<li id="third"><input type="checkbox" id="two" aria-label="..." value="1"
+					name="sorting"><span class="spacing"></span>Product </li>
+				<li id="fourth"><input type="checkbox" id="three" aria-label="..." value="1"
+					name="sorting"><span class="spacing"></span>State </li>
+			</ul>
+		</div>
 		<div id="table-scroll">
 			<table id="entries" class="light">
 				<tr>
@@ -106,11 +120,23 @@
 			</table>
 		</div>
 	</div>
-
+	
+	<div class="modal fade popup" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content" id="work">
+	      ...
+	    </div>
+	  </div>
+	</div>
+	<!-- Normal jQuery file -->
 	<script src="js/jquery.min.js"></script>
-	<script src="papaparse.min.js"></script>
+	<!-- Papa Parse - CSV to JSON converter http://papaparse.com/-->
+	<script src="js/papaparse.min.js"></script>
+	<!-- Main JavaScript file which handles all the logic of the table of complaints/entries -->
 	<script src="js/entries.js"></script>
+	<!-- Handles logic of check boxes -->
 	<script src="js/oneCheck.js"></script>
+	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
