@@ -1,4 +1,6 @@
-//Heavily modified from: http://stackoverflow.com/questions/9709209/html-select-only-one-checkbox-in-a-group
+/**
+ * Heavily modified from: http://stackoverflow.com/questions/9709209/html-select-only-one-checkbox-in-a-group
+ */
 $("input:checkbox").on('click', function() {
 	var $box = $(this);
 	if ($box.is(":checked")) {

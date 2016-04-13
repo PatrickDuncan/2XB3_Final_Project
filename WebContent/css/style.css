@@ -107,7 +107,7 @@ p {
 	font-weight:bold;
 }
 
-#searching {
+#sorting, #searching {
 	display:none;
 	position:fixed;
 	left:50%;

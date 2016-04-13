@@ -14,13 +14,18 @@
 <title>Bitter Buyers</title>
 <link href='https://fonts.googleapis.com/css?family=Dosis:500'
 	rel='stylesheet' type='text/css'>
+<!-- The default Bootstrap style sheet -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Our custom style sheet -->
 <link href="css/style.css" rel="stylesheet">
 
 </head>
 
 <body class="light">
-	<div class="sixteen-nine" id="oneLine">
+	
+	<!-- The top panel which has the logo and the description of the website. -->
+	
+	<div id="oneLine">
 		<p id="desc">
 			<img id="logo" src="assets/logo.png" align="left"><br> <br>Bitter
 			Buyers is an application geared towards a better relationship between
@@ -32,6 +37,9 @@
 	</div>
 
 	<div id="back" class="medium">
+		
+		<!-- The area with the sorting buttons and graphing solution -->
+		
 		<div id="top" class="dark">
 			<div class="btn-group">
 				<button type="button" class="btn btn-primary btn-lg"
@@ -44,8 +52,9 @@
 					onClick="return sort(7)">Company</button>
 				<button type="button" class="btn btn-primary btn-lg"
 					onClick="return sort(8)">State</button>
-
 			</div>
+			
+			<!-- Graphing solution UI -->
 
 			<div id="countInput" class="col-lg-2">
 				<div class="input-group">
@@ -75,14 +84,22 @@
 				</ul>
 			</nav>
 		</div>
+		
+		<!-- The text that appears when the website is doing heavy computations in the background -->
+		
 		<div id="loading">
 			<h3>Loading . . .</h3>
+		</div>
+		<div id="sorting">
+			<h3>Sorting . . .</h3>
 		</div>
 		<div id="searching">
 			<h3>Searching . . .</h3>
 		</div>
 		<br> <br> <br>
-
+		
+		<!-- The dropdown menu to go from min to max and max to min -->
+		
 		<div class="btn-group" id="options">
 			<button id="optionsLabel" type="button"
 				class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
@@ -94,6 +111,8 @@
 					name="minMax"><span class="spacing"></span>Z - A</li>
 			</ul>
 		</div>
+		
+		<!-- The  dropdown menu to select what column you want to be searching -->
 		
 		<div class="btn-group" id="options2" style="position:fixed">
 			<br>
@@ -112,6 +131,9 @@
 					name="sorting"><span class="spacing"></span>State </li>
 			</ul>
 		</div>
+		
+		<!-- The large table of entries. Empty initially, displayScript writes to the id, entries -->
+		
 		<div id="table-scroll">
 			<table id="entries" class="light">
 				<tr>
@@ -120,6 +142,9 @@
 			</table>
 		</div>
 	</div>
+	
+	<!-- Bootstrap modal window that has more information about an entry in the table. Empty initially
+	and modified by popupScript.  -->
 	
 	<div class="modal fade popup" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 	  <div class="modal-dialog modal-lg">
@@ -132,10 +157,16 @@
 	<script src="js/jquery.min.js"></script>
 	<!-- Papa Parse - CSV to JSON converter http://papaparse.com/-->
 	<script src="js/papaparse.min.js"></script>
-	<!-- Main JavaScript file which handles all the logic of the table of complaints/entries -->
-	<script src="js/entries.js"></script>
+	<!-- Handles all the output of the table of complaints/entries and acts like the main -->
+	<script src="js/displayScript.js"></script>
+	<!-- Handles all the searching functionality -->
+	<script src="js/searchScript.js"></script>
+	<!-- Handles the sorting of the table of complaints/entries -->
+	<script src="js/sortScript.js"></script>
+	<!-- Creates the modal windows content on press -->
+	<script src="js/popupScript.js"></script>
 	<!-- Handles logic of check boxes -->
-	<script src="js/oneCheck.js"></script>
+	<script src="js/checkboxScript.js"></script>
 	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
 </body>
