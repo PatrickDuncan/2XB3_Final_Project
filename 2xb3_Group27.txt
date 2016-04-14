@@ -1,6 +1,6 @@
 SFWR ENG 2XB3
 Divya Sr dhar   sridhad   001411552
-Role: Log Admin, Design Specifications Document
+Role: Log Admin, Design Specifications Document, Graphing Solution
 
 SFWR ENG 2XB3
 Hayden Smith    smithhj2  001427520
@@ -12,8 +12,10 @@ Role: Creative Director, Design Specifications Document
 
 COMP SCI 2XB3
 Patrick Duncan  duncanpd  001413067
-Role: Chief Developer, Front End, Back End
+Role: Chief Developer, Front End, Back End, Design Specifications Document
 
 SFWR ENG 2XB3
 Connor Simpson  simpsc    001328612
 Role: Presentation Slides, Design Specifications Document
+
+9:47pm April 13, 2016: "The work being submitted by us is our group work."

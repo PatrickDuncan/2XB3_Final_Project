@@ -58,9 +58,9 @@
 
 			<div id="countInput" class="col-lg-2">
 				<div class="input-group">
-					<input type="text" class="form-control" aria-label="..."
-						placeholder="Keyword..."> <span class="input-group-btn">
-						<button class="btn btn-default light" type="button">Go!</button>
+					<span class="input-group-btn">
+						<button class="btn btn-default light" type="button"
+						onClick="return graphing()" data-toggle="modal" data-target='.popup'>Graph!</button>
 					</span>
 				</div>
 			</div>
@@ -165,6 +165,8 @@
 	<script src="js/sortScript.js"></script>
 	<!-- Creates the modal windows content on press -->
 	<script src="js/popupScript.js"></script>
+	<!-- Creates the graph of different complaints -->
+	<script src="js/graphScript.js"></script>
 	<!-- Handles logic of check boxes -->
 	<script src="js/checkboxScript.js"></script>
 	<!-- Bootstrap -->
